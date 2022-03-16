@@ -2,6 +2,7 @@
 import React, { createContext, useState } from "react";
 import NavBar from "../NavBar/NavBar";
 
+import { Link } from "react-router-dom";
 import { ReactComponent as Group } from './Assets/group.svg';
 import { ReactComponent as Bank } from './Assets/bank.svg';
 import { ReactComponent as Tax } from './Assets/tax.svg';
@@ -15,7 +16,7 @@ class Settings extends React.Component {
 
         return (
             <div >
-                <NavBar greeting="Payroll"></NavBar>
+                <NavBar greeting="Payroll Setting"></NavBar>
                 <div className="container rounded pb-4">
                     <div classname="row">
 
@@ -33,32 +34,34 @@ class Settings extends React.Component {
                     </div >
                 </div>
 
-                <div class="container pt-4">
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-4 " style={{
+                        <div class="col-md-4 py-4 " style={{
                             textAlign: "center",
-                        }}>
-                            <div className="mx-4 py-4" style={{
-                                border: "1px solid #B11226", borderRadius: "10px",
-                            }}>
-                                < Group ></Group>
+                        }}>  <Link to="/team/member" style={{ textDecoration: 'none' }}>
+                                <div className="mx-4 py-4" style={{
+                                    color: "black",
+                                    border: "1px solid #B11226", borderRadius: "10px",
+                                }}>
+                                    < Group ></Group>
 
-                                <div className="py-2">Add Your<br /> Team</div>
-                            </div>
+                                    <div className="py-2">Add Your<br /> Team</div>
+                                </div></Link>
                         </div>
-                        <div class="col-md-4 " style={{
+                        <div class="col-md-4 py-4" style={{
                             textAlign: "center",
                         }}>
-                            <div className="mx-4 py-4" style={{
-                                border: "1px solid #B11226", borderRadius: "10px",
+
+                            <Link to="/accountSetUp" style={{ textDecoration: 'none' }}>               <div className="mx-4 py-4" style={{
+                                border: "1px solid #B11226", borderRadius: "10px", color: "black"
                             }}>
                                 < Bank ></Bank>
 
                                 <div className="py-2">Link your Bank
                                     <br />Account</div>
-                            </div>
+                            </div></Link>
                         </div>
-                        <div class="col-md-4" style={{
+                        <div class="col-md-4 py-4" style={{
                             textAlign: "center",
                         }}>
                             <div className="mx-4 py-4" style={{

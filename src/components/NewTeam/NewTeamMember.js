@@ -1,13 +1,8 @@
-
 import React, { createContext, useState } from "react";
 
-import { ChakraProvider } from "@chakra-ui/provider";
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css';
-import { Calendar } from 'react-date-range';
-import { DateRangePicker } from 'react-date-range';
-import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
-import Search from '@mui/icons-material/Search';
+import '../../generic/main.css';
 import StickyNavBar from "../StickyNavBar/StickyNavBar";
 
 class NewTeamMember extends React.Component {
@@ -20,20 +15,21 @@ class NewTeamMember extends React.Component {
         return (
             <div >
                 <StickyNavBar greeting="New Team Member"></StickyNavBar>
+
                 <div className="m-5">
                     <div className="my-4"><h3>Tell us about your Team</h3></div>
-                    <form className="mx-5">
+                    <form className="mx-5 mobile-space">
                         <div className="form row">
                             <div className="form-group col-md-6">
                                 <label for="inputEmail4">First Name</label>
                                 <input type="text" className="form-control" id="inputEmail4" placeholder="First Name" />
                             </div>
-                            <div className="form-group col-md-6">
+                            <div className="form-group col-md-6 mobile-top">
                                 <label for="inputPassword4">Last Name</label>
                                 <input type="password" className="form-control" id="inputPassword4" placeholder="Last Name" />
                             </div>
                         </div>
-                        <div className="form-group mx-5 my-4">
+                        <div className="form-group mx-5 mobile-space my-4">
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" id="gridCheck" />
                                 <label className="form-check-label" for="gridCheck">
@@ -68,13 +64,13 @@ class NewTeamMember extends React.Component {
                     <div className="my-5"></div>
                     <div className="my-5"></div>
                     <div className="my-4"><h3>Employee information</h3></div>
-                    <form className="mx-5">
+                    <form className="mx-5 mobile-space">
                         <div className="form row">
                             <div className="form-group col-md-6">
                                 <label for="inputEmail4">Hire date</label>
                                 <input type="date" className="form-control" id="inputEmail4" placeholder="First Name" />
                             </div>
-                            <div className="form-group col-md-6">
+                            <div className="form-group col-md-6 mobile-top" >
                                 <input className="form-check-input" type="checkbox" id="gridCheck" />
                                 <label className="form-check-label" for="gridCheck">
                                     File a new hire report on my behalf.
@@ -84,7 +80,7 @@ class NewTeamMember extends React.Component {
 
                         <div className="form-group  my-3">
                             <label for="inputAddress">2020 Year to Date pay</label>
-                            <input type="text" className="form-control" id="inputAddress" placeholder="$0.00" />
+                            <input type="text" className="form-control" id="inputAddress" placeholder="₦0.00" />
                         </div>
 
                         <div className="form-group">
@@ -101,7 +97,7 @@ class NewTeamMember extends React.Component {
                     <div className="my-5"></div>
                     <div className="my-5"></div>
                     <div className="my-4"><h3>Compensation</h3></div>
-                    <form className="mx-5">
+                    <form className="mx-5 mobile-space">
                         <div className="form-group">
                             <label for="inputState">Job Title</label>
                             <select id="inputState" className="form-control">
@@ -119,9 +115,9 @@ class NewTeamMember extends React.Component {
                                 </select>
                             </div>
 
-                            <div className="form-group col-md-6 ">
+                            <div className="form-group col-md-6 mobile-top">
                                 <label for="inputAddress">Hourly Rate</label>
-                                <input type="text" className="form-control" id="inputAddress" placeholder="$0.00" />
+                                <input type="text" className="form-control" id="inputAddress" placeholder="₦0.00" />
                             </div>
                         </div>
 

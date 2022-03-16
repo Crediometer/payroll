@@ -1,5 +1,6 @@
 
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, } from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 
 
@@ -24,7 +25,7 @@ class Landing extends React.Component {
                         <div className="md-4 lg-4 p-4 m-4  text-center" style={{ backgroundColor: '#B11226', borderRadius: "15px" }} ><div className="p-3"><House></House></div>
                             <div className="text-light text-center fs-1">Payroll priced for great Businesses</div>
                             <div className="text-center p-3">
-                                <button className="btn rounded-pill  text-dark px-4 py-2" style={{ backgroundColor: "white" }}>Setup Payroll</button>
+                                <Link to="/payroll/setup"><button className="btn rounded-pill  text-dark px-4 py-2" style={{ backgroundColor: "white" }}>Setup Payroll</button></Link>
                             </div>
                         </div>
 
@@ -38,26 +39,26 @@ class Landing extends React.Component {
                         <div class="col-md-3" style={{
                             textAlign: "center"
                         }}>
-                            < List ></List><div>Payroll compliance</div><div>Our experianced team helps you make sure your payroll is compliant</div>
+                            < List ></List><div className="fs-4 pb-2">Payroll compliance</div><div style={{ fontSize: "14px", color: "#A8A8A8" }}>Our experianced team helps you make sure your payroll is compliant</div>
                         </div>
 
 
                         <div class="col-md-3" style={{
                             textAlign: "center"
                         }}>
-                            <Time></Time><div>Timecards in a click</div><div>Let employees and independent contractors clock in and out from the Crediometer of sale app, and then import their hours with a click.</div>
+                            <Time></Time><div className="fs-4 pb-2">Timecards in a click</div><div style={{ fontSize: "14px", color: "#A8A8A8" }}>Let employees and independent contractors clock in and out from the Crediometer of sale app, and then import their hours with a click.</div>
                         </div>
 
                         <div class="col-md-3 justify-center" style={{
                             textAlign: "center"
                         }}>
-                            <Group></Group><div>Online account for your team</div><div>Your team member can setup online accounts where they can update their personal details and setup direct deposit.</div>
+                            <Group></Group><div className="fs-4 pb-2">Online account for your team</div><div style={{ fontSize: "14px", color: "#A8A8A8" }}>Your team member can setup online accounts where they can update their personal details and setup direct deposit.</div>
                         </div>
 
                         <div class="col-md-3" style={{
                             textAlign: "center"
                         }}>
-                            <List></List><div>flexible pricing</div><div>Never pay more than you have to-if you pay fewer employees or contrators in a given month, the price you pay goes down.</div>
+                            <List></List><div className="fs-4 pb-2">flexible pricing</div><div style={{ fontSize: "14px", color: "#A8A8A8" }}>Never pay more than you have to-if you pay fewer employees or contrators in a given month, the price you pay goes down.</div>
                         </div>
 
 

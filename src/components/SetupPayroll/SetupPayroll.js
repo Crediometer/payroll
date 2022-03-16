@@ -4,10 +4,11 @@ import React, { createContext, useState } from "react";
 import { ChakraProvider } from "@chakra-ui/provider";
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css';
+import { Link } from "react-router-dom";
 import { Calendar } from 'react-date-range';
 import { DateRangePicker } from 'react-date-range';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
-import Search from '@mui/icons-material/Search';
+import '../../generic/main.css';
 import StickyNavBar from "../StickyNavBar/StickyNavBar";
 
 class SetupPayroll extends React.Component {
@@ -22,7 +23,7 @@ class SetupPayroll extends React.Component {
                 <StickyNavBar greeting="Setup Payroll"></StickyNavBar>
                 <div className="m-5">
                     <div className="my-4"><h3>Tell us about your business</h3></div>
-                    <form className="mx-5">
+                    <form className="mx-5 mobile-space">
 
                         <div className="form-group ">
                             <label for="inputEmail4">Business Name</label>
@@ -52,8 +53,8 @@ class SetupPayroll extends React.Component {
                     </form>
                     <div className="my-5"></div>
                     <div className="my-5"></div>
-                    <div className="my-4"><h3>Business Address</h3></div>
-                    <form className="mx-5">
+                    <div className="my-4 "><h3>Business Address</h3></div>
+                    <form className="mx-5 mobile-space">
 
                         <div className="form-group ">
                             <label for="inputEmail4">Address Line 1</label>
@@ -98,10 +99,10 @@ class SetupPayroll extends React.Component {
                     <div className="my-5"></div>
                     <div className="my-5"></div>
                     <div className="my-4"><h3>Contact Information for pay run and tax filling</h3></div>
-                    <form className="mx-5">
+                    <form className="mx-5 mobile-space">
                         <div className="form row">
                             <div className="form-group col-md-6">
-                                <label for="inputState">personal Mobile</label>
+                                <label for="inputState">Personal Mobile</label>
                                 <input type="text" className="form-control" id="inputAddress" placeholder="City" />
                             </div>
 
@@ -126,8 +127,8 @@ class SetupPayroll extends React.Component {
                             </div>
 
                             <div className="form-group col-md-6">
-                                <input className="form-check-input" type="checkbox" id="gridCheck" />
-                                <label className="form-check-label" for="gridCheck">
+                                <input className="form-check-input" type="checkbox" id="emailCheck" />
+                                <label className="form-check-label" for="emailCheck">
                                     <h5>Receive email reminders so you never miss a pay run</h5>
                                     Crediometer will send reminder to your email ID when its
                                     time to pay your team.
@@ -146,7 +147,7 @@ class SetupPayroll extends React.Component {
 
 
                         <div className="d-flex justify-content-center my-5">
-                            <button type="button" className="btn btn-danger my-5 px-5 rounded-pill">Submit</button>
+                            <Link to="/settings"> <button type="button" className="btn btn-danger my-5 px-5 rounded-pill">Submit</button></Link>
                         </div>
 
                     </form>

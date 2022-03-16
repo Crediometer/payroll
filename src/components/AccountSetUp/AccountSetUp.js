@@ -1,7 +1,7 @@
 
 import React, { createContext, useState } from "react";
 import NavBar from "../NavBar/NavBar";
-
+import { Link } from "react-router-dom";
 import { ReactComponent as LogOut } from './Assets/logout.svg';
 import { ReactComponent as Bank } from './Assets/bank.svg';
 
@@ -23,9 +23,10 @@ class AccountSetUp extends React.Component {
 
                         </div>
                         <div className="md-4 lg-4 p-4 m-4  text-center" >
-                            <div className="text-dark text-center fs-2">Payroll Bank Account</div>
-                            <div className="text-dark text-center fs-3">Link the bank account you’d like to use for payroll withdrawals.</div>
-                            <div className="text-dark text-center fs-4">You won’t be charged for using Crediometer Payroll untill you send your first payments</div>
+                            <div className="text-dark text-center fs-4">Payroll Bank Account</div>
+                            <div className="py-1"></div>
+                            <div className="text-dark text-center fs-4">Link the bank account you’d like to use for payroll withdrawals.</div>
+                            <div className="text-center " style={{ fontSize: "18px", color: "#A8A8A8" }}>You won’t be charged for using Crediometer Payroll untill you send your first payments</div>
 
                         </div>
 
@@ -50,7 +51,7 @@ class AccountSetUp extends React.Component {
                                 }}>< LogOut ></LogOut></div>
 
                                 <div className="pt-4">Link Instantly(Recommended)</div>
-                                <div className="py-2">Log into your bank account and send a
+                                <div className="py-2" style={{ fontSize: "14px", color: "#A8A8A8" }}>Log into your bank account and send a
                                     <br /> payment right away.</div>
                                 <div className="text-center p-3">
                                     <button className="btn rounded-pill  text-light px-4 py-2" style={{ backgroundColor: "#B11226" }}>Link Instantly</button>
@@ -66,10 +67,12 @@ class AccountSetUp extends React.Component {
                                 }}  >< Bank ></Bank></div>
 
                                 <div className="pt-4">Link in 1-2 days</div>
-                                <div className="py-2">We’ll send two micro-deposits in the next
+                                <div className="py-2 " style={{ fontSize: "14px", color: "#A8A8A8" }}>We’ll send two micro-deposits in the next
                                     <br />1-2 business days to verify your account.</div>
                                 <div className="text-center p-3">
-                                    <button className="btn rounded-pill  text-light px-4 py-2" style={{ backgroundColor: "#B11226" }}>Manually Enter</button>
+                                    <Link to="/bankdetails" style={{ textDecoration: 'none' }}>
+                                        <button className="btn rounded-pill  text-light px-4 py-2" style={{ backgroundColor: "#B11226" }}>Manually Enter</button>
+                                    </Link>
                                 </div>
                             </div>
 

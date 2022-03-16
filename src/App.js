@@ -44,7 +44,7 @@ function App() {
               <BankAccountDetails />
             </Route>
 
-            <Route exact path="/new/team">
+            <Route exact path="/new/team/memeber">
               <NewTeamMember />
             </Route >
             <Route exact path="/business/info">

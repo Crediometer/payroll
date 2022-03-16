@@ -188,12 +188,12 @@ export default function NavBar(props) {
                             {props.greeting}
                         </Typography>
                         <Box sx={{ flexGrow: 1 }} />
-                        <Search>
+                        {/* <Search> */}
 
-                            <Logo ></Logo>
+                        <Logo ></Logo>
 
 
-                        </Search>
+                        {/* </Search> */}
                         <Box sx={{ flexGrow: 1 }} />
                         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                             <IconButton size="large" aria-label="show 4 new mails" color="inherit">

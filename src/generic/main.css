@@ -1,0 +1,24 @@
+
+ .graph{
+    height: 70vh;
+ }
+ 
+@media screen and (max-width: 767px) {
+    .mobile-space {
+        margin-right:0% !important;
+        margin-left:0% !important;
+    }
+    .rdrDefinedRangesWrapper {
+        display: none;
+    }
+
+    .mobile-top
+    {
+        margin-top: 3rem!important;
+        /* margin-bottom: 3rem!important;    */
+    }
+
+    .graph{
+        height:60vh;
+    }
+ }

@@ -6,11 +6,17 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useHistory
+} from "react-router-dom";
+
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Close';
-import MailIcon from '@mui/icons-material/Mail';
+
 
 
 
@@ -24,6 +30,7 @@ const Search = styled('div')(({ theme }) => ({
     marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
+
     [theme.breakpoints.up('sm')]: {
         marginLeft: theme.spacing(3),
         width: 'auto',
@@ -64,6 +71,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function StickyNavBar(props) {
+    const history = useHistory();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -76,11 +84,6 @@ export default function StickyNavBar(props) {
 
     const handleMobileMenuClose = () => {
         setMobileMoreAnchorEl(null);
-    };
-
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-        handleMobileMenuClose();
     };
 
     const handleMobileMenuOpen = (event) => {
@@ -113,11 +116,12 @@ export default function StickyNavBar(props) {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <ThemeProvider theme={darkTheme}>
-                <AppBar position="static">
+                <AppBar elevation="1" position=" static">
                     <Toolbar>
                         <IconButton
                             size="large"
                             edge="start"
+                            onClick={() => history.goBack()}
                             color="inherit"
                             aria-label="open drawer"
                             sx={{ mr: 2 }}
@@ -136,7 +140,7 @@ export default function StickyNavBar(props) {
                         </Typography>
                         <Box sx={{ flexGrow: 1 }} />
                         {props.withButton ?
-                            (<button type="button" className="btn btn-danger px-5 rounded-pill">Submit</button>) : null}
+                            (<button type="button" onClick={() => { history.push(props.action); }} className="btn btn-danger px-5 rounded-pill">Submit</button>) : null}
 
                     </Toolbar>
                 </AppBar>

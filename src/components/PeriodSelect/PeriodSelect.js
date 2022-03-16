@@ -4,7 +4,7 @@ import NavBar from "../NavBar/NavBar";
 import { ChakraProvider } from "@chakra-ui/provider";
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css';
-import { Calendar } from 'react-date-range';
+import "../../generic/main.css";
 import { DateRangePicker } from 'react-date-range';
 
 class PeriodSelect extends React.Component {
@@ -12,6 +12,18 @@ class PeriodSelect extends React.Component {
     // handleSelect = (date) => {
     //     console.log(date); // native Date object
     // }
+
+    // constructor(props) {
+    //     const [state, setState] = useState([
+    //         {
+    //             startDate: new Date(),
+    //             endDate: null,
+    //             key: 'selection'
+    //         }
+    //     ]);
+
+
+
     handleSelect(ranges) {
         console.log(ranges);
         // {
@@ -94,6 +106,11 @@ class PeriodSelect extends React.Component {
                             <div className="my-2"></div>
                             <ChakraProvider theme={theme}>
                                 <DateRangePicker
+                                    editableDateInputs={true}
+                                    // onChange={item => setState([item.selection])}
+                                    moveRangeOnFirstSelection={false}
+                                    // ranges={state}
+                                    // months={1}
                                     ranges={[selectionRange]}
                                     onChange={this.handleSelect}
                                 />
@@ -101,8 +118,8 @@ class PeriodSelect extends React.Component {
                         </div>
                         <div className="md-4 lg-4 p-4 m-4  " >
                             <div className="text-dark  fs-3">Automatic payroll. </div>
-                            <div className="text-dark  fs-4">Timecards willbe automatically imported and payroll processed at 5am on your payroll due date. You’ll receive an email summarizing your payroll and have until 7pm that evening to cancel and make any changes, Automatic payroll can only be enabled once you have run 1 payroll with us mannully. Learn more  </div>
-                            <div className="form-group mx-5 my-4">
+                            <div className="" style={{ fontSize: "16px", color: "#A8A8A8" }}>Timecards willbe automatically imported and payroll processed at 5am on your payroll due date. You’ll receive an email summarizing your payroll and have until 7pm that evening to cancel and make any changes, Automatic payroll can only be enabled once you have run 1 payroll with us mannully. Learn more  </div>
+                            <div className="form-group mx-5 my-4 mobile-space">
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="gridCheck" />
                                     <label className="form-check-label" for="gridCheck">
@@ -113,8 +130,8 @@ class PeriodSelect extends React.Component {
 
 
                             <div className="text-dark  fs-3">Tip Importing. </div>
-                            <div className="text-dark  fs-4">Import and calculate credit card tips when running payroll.</div>
-                            <div className="form-group mx-5 my-4">
+                            <div className="" style={{ fontSize: "16px", color: "#A8A8A8" }}>Import and calculate credit card tips when running payroll.</div>
+                            <div className="form-group mx-5 my-4 mobile-space">
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" id="gridCheck" />
                                     <label className="form-check-label" for="gridCheck">
