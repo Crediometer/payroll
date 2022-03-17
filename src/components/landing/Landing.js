@@ -3,7 +3,7 @@ import React, { createContext, useState, } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 
-
+import '../../generic/main.css';
 import { ReactComponent as House } from './Assets/house.svg';
 import { ReactComponent as List } from './Assets/list.svg';
 import { ReactComponent as Time } from './Assets/time.svg';
@@ -43,22 +43,22 @@ class Landing extends React.Component {
                         </div>
 
 
-                        <div class="col-md-3" style={{
+                        <div class="col-md-3 mobile-top" style={{
                             textAlign: "center"
                         }}>
                             <Time></Time><div className="fs-4 pb-2">Timecards in a click</div><div style={{ fontSize: "14px", color: "#A8A8A8" }}>Let employees and independent contractors clock in and out from the Crediometer of sale app, and then import their hours with a click.</div>
                         </div>
 
-                        <div class="col-md-3 justify-center" style={{
+                        <div class="col-md-3 justify-center mobile-top" style={{
                             textAlign: "center"
                         }}>
                             <Group></Group><div className="fs-4 pb-2">Online account for your team</div><div style={{ fontSize: "14px", color: "#A8A8A8" }}>Your team member can setup online accounts where they can update their personal details and setup direct deposit.</div>
                         </div>
 
-                        <div class="col-md-3" style={{
+                        <div class="col-md-3 mobile-top"  style={{
                             textAlign: "center"
                         }}>
-                            <List></List><div className="fs-4 pb-2">flexible pricing</div><div style={{ fontSize: "14px", color: "#A8A8A8" }}>Never pay more than you have to-if you pay fewer employees or contrators in a given month, the price you pay goes down.</div>
+                            <List></List><div className="fs-4 pb-2">Flexible pricing</div><div style={{ fontSize: "14px", color: "#A8A8A8" }}>Never pay more than you have to-if you pay fewer employees or contrators in a given month, the price you pay goes down.</div>
                         </div>
 
 
